@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Smart home</title>
+</head>
+
+<body>
+    <div class="container-view">
+        <div class="content">
+            <div class="title-main">
+                <h1>HỆ THỐNG VƯỜN TỰ ĐỘNG</h1>
+            </div>
+            <div class="date-time">
+                <p id="time"></p>
+            </div>
+            <div class="trang-thai">
+                <div class="tieu-de"><h3>Thông tin</h3></div>
+                <table class="status">
+                    <tr>
+                        <th style="width: 25%;background-color: #FF6666; "> Nhiệt độ (°C)</th>
+                        <th style="width: 25%; background-color: #3366CC; ">Độ ẩm (%)</th>
+                        <th style="width: 25%; background-color: #FFFF66; ">Ánh sáng</th>
+                        <th style="width: 25%; background-color: #CC9966; ">Độ ẩm đất</th>
+                    </tr>
+                    <tr>
+                        <td  id="temp_view">
+                            <div class="element">
+                                <p class="ele-status" id="currentTemp"></p>
+                            </div>
+                        </td>
+                        <td id="humi_view">
+                            <div class="element">
+                                <p class="ele-status" id="currentHumi"></p>
+                            </div>
+                        </td>
+                        <td id="light_view">
+                            <div class="element">
+                                <p class="ele-status" id="currentLight"></p>
+                            </div>
+                        </td>
+                        <td id="soil_view">
+                            <div class="element">
+                                <p class="ele-status" id="currentSoil"></p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="dieu-khien">
+                <div class="tieu-de"><h3>Thiết bị</h3></div>
+                <table class="control">
+                    <tr>
+                        <td class="button-control turn-off" id="div_led" style="width: 50%">
+                            <label class="element" for="led-status" id="led-stt">Máy bơm</label>
+                            <input hidden type="checkbox" name="led-status" id="led-status">
+                        </td>
+                        <td class="button-control turn-off" id="div_may_bom">
+                            <label class="element" for="may-bom-status" id="may-bom-stt">Đèn</label>
+                            <input hidden type="checkbox" name="may-bom-status" id="may-bom-status" onclick="control()">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="warning" id="warning">
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+<script src="control.js"></script>
+</html>
